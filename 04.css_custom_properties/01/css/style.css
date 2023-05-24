@@ -1,0 +1,61 @@
+:root {
+  --card-primary-clr: yellowgreen;
+  --card-accent-clr: tomato;
+}
+
+.page {
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+.cards {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cards-item {
+  display: block;
+  box-sizing: border-box;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  border: 1px solid #bdbdbd;
+  padding-inline: 1rem;
+  transition: 1s;
+
+  /* !!! */
+  color: var(--card-primary-clr);
+}
+
+.cards-item__button {
+  display: block;
+  box-sizing: border-box;
+  width: 150px;
+  height: 30px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 30px;
+
+  /* !!! */
+  background-color: var(--card-primary-clr);
+}
+
+.cards-item_important {
+  --card-primary-clr: var(--card-accent-clr);
+  /* В данном примере мы изменили значение
+  переменной, что не очень рекомендуется делать.
+  Но, благодаря этому, нам не пришлось создавать
+  дополнительный класс для "важной кнопки".
+  Мы просто переопределили основной цвет внутри
+  модификатора карточки и это значение унаследовалось
+  кнопкой.
+  Важный момент - этот прием удобен в данном случае,
+  когда цвета нескольких элементов совпадают в обычном
+  состоянии и в модифицированном. Но такое возможно
+  не всегда - все зависит от конкретного дизайна.*/
+}

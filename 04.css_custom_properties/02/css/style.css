@@ -1,0 +1,78 @@
+:root {
+  --fs-b: 1rem;
+  --fs-h1: 3rem;
+  --fs-h2: 1.5rem;
+}
+
+.page {
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+/*
+Предположим, что нам необходимо изменить
+размер шрифта (либо какие-то другие параметры),
+при другом размере экрана.
+
+В банальном подходе мы могли бы изначально
+определить разные переменные размеров шрифта
+для разных экранов, а потом переназначить их
+в media-запросе:
+
+:root {
+  --fs-b-lg: 1rem;
+  --fs-h1-lg: 3rem;
+  --fs-h2-lg: 1.5rem;
+
+  --fs-b-sm: .8rem;
+  --fs-h1-sm: 2rem;
+  --fs-h2-sm: 1.2rem;
+}
+
+h1 {
+  font-size: var(--fs-h1-lg);
+}
+
+h2 {
+  font-size: var(--fs-h2-lg);
+}
+
+body {
+  font-size: var(--fs-b-lg);
+}
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: var(--fs-h1-sm);
+  }
+
+  h2 {
+    font-size: var(--fs-h2-sm);
+  }
+
+  body {
+    font-size: var(--fs-b-sm);
+  }
+}
+
+Но благодаря переменным мы можем
+это сделать достаточно легко, просто
+переопределив значения переменных:
+*/
+
+@media (max-width: 800px) {
+  :root {
+    --fs-b: .8rem;
+    --fs-h1: 2rem;
+    --fs-h2: 1.2rem;
+  }
+}

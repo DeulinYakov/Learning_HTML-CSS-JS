@@ -1,0 +1,17 @@
+:root {
+  --scroll: 0;
+}
+
+.page {
+  margin: 0;
+  height: 3000px;
+}
+
+.progress {
+  position: fixed;
+  bottom: 0;
+  width: calc(100vw * var(--scroll));
+  height: 100vh;
+  background-color: rgb(calc(255 * var(--scroll)), 100, 200);
+  transition: 1s;
+}
