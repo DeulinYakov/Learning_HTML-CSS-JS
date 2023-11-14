@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap');
+*{
+    font-size: 16px;
+}
+body{
+    background-color: #153A23;
+}
+
+.text{
+    max-width: 200px;
+    margin: 20rem 20rem 20rem 20rem;
+}
